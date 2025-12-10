@@ -1,0 +1,34 @@
+baseURL = 'https://example.org/'
+languageCode = 'sk'
+title = 'Plný života'
+theme = ''
+
+[params]
+  description = 'Pripojte sa k nám na trojdňovú konferenciu plnú inšpirácie, prednášok a workshopov'
+  eventDate = '20.-22. február 2026'
+  location = 'GAS Banská Bystrica'
+  subtitle = 'Mládežnícka konferencia'
+  tagline = 'Nie pretože všetko máš, ale preto, že Boh napĺňa to, čo je prázdne.'
+  description2 = 'Príď zažiť, čo naozaj znamená byť živí. Semináre. Športy. Hry. Worship. Ľudia ako ty.'
+
+[menu]
+  [[menu.main]]
+    name = 'Domov'
+    url = '/'
+    weight = 1
+  [[menu.main]]
+    name = 'Rečníci'
+    url = '/speakers/'
+    weight = 2
+  [[menu.main]]
+    name = 'Program'
+    url = '/program/'
+    weight = 3
+  [[menu.main]]
+    name = 'Semináre'
+    url = '/seminars/'
+    weight = 4
+  [[menu.main]]
+    name = 'Registrácia'
+    url = '/#register'
+    weight = 5

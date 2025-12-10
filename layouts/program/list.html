@@ -1,0 +1,43 @@
+{{ define "main" }}
+<section class="page-header">
+    <div class="container">
+        <h1>{{ .Title }}</h1>
+        <p>Podrobný program konferenie.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        {{ .Content }}
+
+        <div class="program-days">
+            {{ range .Pages.ByWeight }}
+            <div class="program-day">
+                <h2 class="day-title">{{ .Title }}</h2>
+                <p class="day-date">{{ .Params.eventDate }}</p>
+
+                <div class="schedule">
+                    {{ range .Params.sessions }}
+                    <div class="session-item">
+                        <div class="session-time">{{ .time }}</div>
+                        <div class="session-details">
+                            <h3 class="session-title">{{ .title }}</h3>
+                            {{ with .speaker }}
+                            <p class="session-speaker">{{ . }}</p>
+                            {{ end }}
+                            {{ with .description }}
+                            <p class="session-description">{{ . }}</p>
+                            {{ end }}
+                            {{ with .track }}
+                            <span class="session-track track-{{ . }}">{{ . }}</span>
+                            {{ end }}
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}

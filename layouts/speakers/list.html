@@ -1,0 +1,32 @@
+{{ define "main" }}
+<section class="page-header">
+    <div class="container">
+        <h1>{{ .Title }}</h1>
+        <p>Meet our distinguished speakers</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="speakers-grid">
+            {{ range .Pages }}
+            <div class="speaker-card-detailed">
+                <div class="speaker-image">
+                    {{ if .Params.image }}
+                    <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+                    {{ else }}
+                    <div class="speaker-placeholder">{{ substr .Title 0 1 }}</div>
+                    {{ end }}
+                </div>
+                <div class="speaker-info">
+                    <h3>{{ .Title }}</h3>
+                    <p class="speaker-role">{{ .Params.role }}</p>
+                    <!-- <p class="speaker-company">{{ .Params.company }}</p> -->
+                    <p class="speaker-bio">{{ .Summary }}</p>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}

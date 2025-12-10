@@ -1,0 +1,32 @@
+{{ define "main" }}
+<section class="page-header">
+    <div class="container">
+        <h1>{{ .Title }}</h1>
+        <p>Môžeš sa tešiť na tieto semináre. Postupne budeme dopĺňať ďalšie.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="seminars-grid">
+            {{ range .Pages }}
+            <div class="seminar-card">
+                <div class="seminar-header">
+                    {{ with .Params.track }}
+                    <span class="seminar-track track-{{ . }}">{{ . }}</span>
+                    {{ end }}
+                    <span class="seminar-duration">{{ .Params.duration }}</span>
+                </div>
+                <h3>{{ .Title }}</h3>
+                <p class="seminar-description">{{ .Summary }}</p>
+                <div class="seminar-meta">
+                    {{ with .Params.instructor }}
+                    <p class="seminar-instructor"><strong>Rečník:</strong> {{ . }}</p>
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
