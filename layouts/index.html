@@ -115,21 +115,55 @@
         <h2 class="section-heading">Program</h2>
 
         <div class="program-timeline">
-            {{ range $index, $page := (where .Site.RegularPages "Section" "program").ByWeight }}
             <div class="timeline-item">
                 <div class="timeline-marker">
-                    <span class="day-number">{{ add $index 1 }}</span>
+                    <span class="day-number">1</span>
                 </div>
                 <div class="timeline-content">
-                    <h3>{{ .Title }} {{ .Params.eventDate }}</h3>
+                    <h3>Piatok 20. február</h3>
+                    <p class="timeline-desc">Príchod, registrácia a úvodné stretnutie. Spoznaj nových ľudí a priprav sa
+                        na úžasný víkend.</p>
                     <ul class="timeline-highlights">
-                        {{ range .Params.sessions }}
-                        <li>{{ .time }}{{ if .title }} - {{ .title }}{{ end }}{{ if .speaker }} ({{ .speaker }}){{ end }}</li>
-                        {{ end }}
+                        <li>16:00 - Registrácia</li>
+                        <li>17:00 - 19:00 - Večera</li>
+                        <li>20:00 - Večerný program</li>
+                        <li>22:00 - Semináre a športy</li>
                     </ul>
                 </div>
             </div>
-            {{ end }}
+
+            <div class="timeline-item">
+                <div class="timeline-marker">
+                    <span class="day-number">2</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>Sobota 21. február</h3>
+                    <p class="timeline-desc">Hlavný deň konferencie s prednáškami, seminármi a aktivitami.</p>
+                    <ul class="timeline-highlights">
+                        <li>7:15 - 8:30 - Raňajky</li>
+                        <li>9:00 - Hlavný program</li>
+                        <li>10:45 - Semináre</li>
+                        <li>12:00 - Obed</li>
+                        <li>14:00 - Semináre</li>
+                        <li>19:30 - Hlavný program</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">
+                    <span class="day-number">3</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>Nedeľa 22. február</h3>
+                    <p class="timeline-desc">Záverečný deň s bohoslužbou a rozlúčkou.</p>
+                    <ul class="timeline-highlights">
+                        <li>7:15 - 8:30 - Raňajky</li>
+                        <li>09:00 - Hlavný program</li>
+                        <li>12:00 - Obed</li>
+                    </ul>
+                </div>
+            </div>
         </div>
         
         <div style="text-align: center; margin-top: 3rem;">

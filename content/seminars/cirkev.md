@@ -1,7 +1,7 @@
 ---
 title: "Cirkev v realite života"
 track: "Cirkev"
-duration: "3 hours"
+duration: "2 hod."
 instructor: "Edo Gurka"
 ---
 

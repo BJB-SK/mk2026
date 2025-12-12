@@ -1,7 +1,7 @@
 ---
 title: "Vzťahy - Q&A manželov Polohovcov"
 track: "Vzťahy"
-duration: "3 hours"
+duration: "2 hod."
 instructor: "Polohovci"
 ---
 
