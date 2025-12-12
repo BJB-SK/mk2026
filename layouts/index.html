@@ -83,7 +83,7 @@
         <p class="section-subtitle">Spoznaj tých, ktorí ťa budú inšpirovať</p>
 
         <div class="speakers-grid speakers-grid-home">
-            {{ range first 4 (where .Site.RegularPages "Section" "speakers") }}
+            {{ range first 5 (where .Site.RegularPages "Section" "speakers") }}
             <div class="speaker-card-detailed">
                 <div class="speaker-image">
                     {{ if .Params.image }}

@@ -1489,14 +1489,21 @@ img {
 }
 
 .speakers-grid-home {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    /* Reduce gap slightly to fit better if needed */
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
 }
 
-@media (max-width: 1100px) {
+.speakers-grid-home .speaker-card-detailed .speaker-info {
+    padding: 1rem;
+}
+
+.speakers-grid-home .speaker-card-detailed h3 {
+    font-size: 1.3rem;
+}
+
+@media (max-width: 1024px) {
     .speakers-grid-home {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
